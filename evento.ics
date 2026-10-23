@@ -1,0 +1,21 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Elysium Invitaciones//Cumple Iris Araceli//ES
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:recepcion-cumple-iris-20261219@cumple-iris-araceli-troncoso-villafana.vercel.app
+DTSTAMP:20261023T120000Z
+DTSTART:20261219T200000Z
+DTEND:20261220T050000Z
+SUMMARY:Cumpleaños de Iris Araceli
+DESCRIPTION:Recepción 2:00 PM. Ceremonia religiosa: por confirmar.\n\nInvitación: https://cumple-iris-araceli-troncoso-villafana.vercel.app
+LOCATION:Barda Real Jardín\, Calz. de los Arcos 557\, Rincón de los Arcos\, 36633 Irapuato\, Gto.
+STATUS:CONFIRMED
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Mañana es el cumpleaños de Iris Araceli
+END:VALARM
+END:VEVENT
+END:VCALENDAR
