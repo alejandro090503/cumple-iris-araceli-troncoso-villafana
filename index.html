@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>Iris Araceli &middot; Mi Cumplea&ntilde;os &middot; 19 Diciembre 2026</title>
+<title>Iris Araceli &middot; Mis 3 A&ntilde;itos &middot; 19 Diciembre 2026</title>
 <meta name="description" content="Invitaci&oacute;n digital al cumplea&ntilde;os de Iris Araceli Troncoso Villafa&ntilde;a &middot; 19 de diciembre de 2026 &middot; Irapuato, Guanajuato">
-<meta property="og:title" content="Cumplea&ntilde;os de Iris Araceli &middot; 19 Diciembre 2026">
+<meta property="og:title" content="Los 3 a&ntilde;itos de Iris Araceli &middot; 19 Diciembre 2026">
 <meta property="og:description" content="Te espero para celebrar &middot; Irapuato, Gto. &middot; 19 de diciembre de 2026">
 <meta property="og:url" content="https://cumple-iris-araceli-troncoso-villafana.vercel.app">
 <meta property="og:image" content="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/og-image.jpg?v=1">
@@ -1113,7 +1113,7 @@ body{font-weight:500;font-size:18px;}
   content:'';position:absolute;inset:0;z-index:0;pointer-events:none;
   background:
     linear-gradient(180deg,#fff7f7 0%,rgba(255,247,247,.30) 24%,rgba(255,247,247,.30) 74%,#fff7f7 100%),
-    url('https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/bg-familia.jpg') center/cover no-repeat;
+    url('ink/ink-corner.webp') center/cover no-repeat;
   opacity:.62;
 }
 .dh-glow{
@@ -1461,7 +1461,7 @@ body{font-weight:500}
 /* 1. HERO: texto abajo, foto con deriva continua (en el hijo) y brillo */
 .hero{justify-content:flex-end!important;align-items:center!important}
 .hero-bg{background:none!important;filter:none!important;overflow:hidden}
-.hero-drift{position:absolute;inset:-3%;background:url('https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/hero.jpg') center 14%/cover no-repeat;animation:heroDrift 26s ease-in-out infinite alternate}
+.hero-drift{position:absolute;inset:-3%;background:url('ink/ink-hero.webp') center/cover no-repeat;animation:heroDrift 26s ease-in-out infinite alternate}
 @keyframes heroDrift{0%{transform:translate3d(0,0,0) scale(1.02)}100%{transform:translate3d(-2%,1.4%,0) scale(1.10)}}
 .hero-shine{position:absolute;inset:-20%;mix-blend-mode:soft-light;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(255,240,236,.75) 45%,rgba(255,255,255,.95) 50%,rgba(255,240,236,.75) 55%,transparent 70%);animation:heroShine 9s ease-in-out infinite}
 @keyframes heroShine{0%{transform:translateX(-60%)}55%,100%{transform:translateX(60%)}}
@@ -1561,6 +1561,18 @@ body{font-weight:500}
 @media (prefers-reduced-motion:reduce){
   .hero-drift,.hero-shine,.ink-bg i,.loc1-card,.fam2-group,.dc-fig img,.dc-sw-dot,.dc-sw-dot::after,.env-body.landed,.env-tap-hint.show{animation:none!important}
 }
+
+/* ===== 3 AÑITOS: portada sin foto ===== */
+.hero-veil{background:linear-gradient(to bottom,rgba(255,247,247,.25) 0%,rgba(255,247,247,0) 30%,rgba(255,247,247,.55) 62%,rgba(255,247,247,.92) 100%)!important}
+.hero-eyebrow{color:var(--dark)!important;text-shadow:0 0 12px rgba(255,248,246,.95)!important}
+.hero-name{background:linear-gradient(160deg,#6b2f3d 0%,#9c5663 25%,#e0a3ac 45%,#f3cdd0 52%,#e0a3ac 60%,#9c5663 80%,#6b2f3d 100%)!important;-webkit-background-clip:text!important;background-clip:text!important;filter:drop-shadow(0 2px 12px rgba(255,255,255,.9))!important}
+.hero-sub .xv-anos,.hero-date-text,.hero-city{color:var(--dark)!important;text-shadow:0 0 10px rgba(255,248,246,.95)!important}
+.hero-frame-corner path{stroke:rgba(183,110,121,.65)}
+.age-3{display:block;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;font-size:clamp(90px,26vw,130px);line-height:1;padding:.1em .3em;margin:-.15em 0 -.1em;
+  background:linear-gradient(160deg,#6b2f3d,#9c5663 30%,#d68a9c 50%,#9c5663 70%,#6b2f3d);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 4px 14px rgba(183,110,121,.35));animation:ageBounce 3.4s ease-in-out infinite}
+@keyframes ageBounce{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
+@media (prefers-reduced-motion:reduce){.age-3{animation:none}}
 </style>
 </head>
 <body>
@@ -1608,7 +1620,7 @@ body{font-weight:500}
 <!-- LOADER -->
 <div id="loader">
   <div class="ld-name" id="ldName"></div>
-  <div class="ld-tag" id="ldTag">Mi Cumplea&ntilde;os &middot; 19 Diciembre 2026</div>
+  <div class="ld-tag" id="ldTag">Mis 3 A&ntilde;itos &middot; 19 Diciembre 2026</div>
 </div>
 
 <div class="wrap" style="visibility:hidden">
@@ -1620,7 +1632,7 @@ body{font-weight:500}
     <div class="hero-bottom">
 
       <!-- Eyebrow superior -->
-      <div class="hero-eyebrow" id="hEy">TE INVITO A CELEBRAR</div>
+      <div class="hero-eyebrow" id="hEy">VEN A CELEBRAR CONMIGO</div>
 
       <!-- Frame dorado esquinas -->
       <div class="hero-frame" id="hFrame">
@@ -1632,7 +1644,8 @@ body{font-weight:500}
 
       <h1 class="hero-name" id="hNm">Iris Araceli</h1>
       <div class="hero-sub" id="hSb">
-        <span class="xv-anos">Mi Cumplea&ntilde;os</span>
+        <span class="age-3" aria-hidden="true">3</span>
+        <span class="xv-anos">Mis A&ntilde;itos</span>
       </div>
 
       <!-- Fecha bajo el nombre -->
@@ -1665,27 +1678,17 @@ body{font-weight:500}
     <div class="ink-bg " aria-hidden="true"><i style="background-image:url('ink/ink-top.webp')"></i></div>
     <div class="intro-wrap rv">
       <p class="intro-salmo">
-        <span class="intro-salmo-ref" data-en="Psalm 37:4">Salmos 37:4</span>
-        <span data-en="&ldquo;Take delight in the Lord,<br>and He will give you the desires of your heart.&rdquo;">&ldquo;Del&eacute;itate en el Se&ntilde;or,<br>
-        y &Eacute;l te conceder&aacute; las peticiones de tu coraz&oacute;n.&rdquo;</span>
+        <span class="intro-salmo-ref">Salmos 127:3</span>
+        <span>&ldquo;He aqu&iacute;, herencia de Jehov&aacute; son los hijos;<br>cosa de estima el fruto del vientre.&rdquo;</span>
       </p>
 
-      <p class="intro-text"><span class="intro-drop">C</span>on el coraz&oacute;n lleno de gratitud celebro un a&ntilde;o m&aacute;s de vida,
-        de bendiciones y de momentos compartidos con las personas que m&aacute;s quiero.<br><br>
-        Nada me har&iacute;a m&aacute;s feliz que tenerte a mi lado en este d&iacute;a tan especial,
-        para dar gracias a Dios y celebrar juntos con alegr&iacute;a.
+      <p class="intro-text">&iexcl;Ya voy a cumplir 3 a&ntilde;itos! Junto con mis pap&aacute;s y mis padrinos
+        quiero dar gracias a Dios por mi vida y celebrar con las personas que m&aacute;s quiero.<br><br>
+        Me har&aacute; muy feliz que vengas a jugar, re&iacute;r y festejar conmigo en este d&iacute;a tan especial.
       </p>
       <span class="intro-firma">Iris Araceli</span>
     </div>
 
-  <div class="ph rv">
-    <svg class="ph-corner ph-c-tl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-tr" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-bl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-br" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <div class="ph-inner"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/foto-intro.jpg?v=2" alt="Iris Araceli" loading="lazy"></div>
-    <span class="ph-cap">Un a&ntilde;o m&aacute;s</span>
-  </div>
   </section>
 
 
@@ -1757,14 +1760,6 @@ body{font-weight:500}
   </div>
 
 
-  <div class="ph rv" id="ph-ancha">
-    <svg class="ph-corner ph-c-tl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-tr" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-bl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-br" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <div class="ph-inner"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/foto-ancha.jpg" alt="Iris Araceli" loading="lazy"></div>
-    <span class="ph-cap">Con alegr&iacute;a</span>
-  </div>
 
 
   <!-- RESERVA ESTA FECHA -->
@@ -1772,7 +1767,7 @@ body{font-weight:500}
     <div class="dh-glow" aria-hidden="true"></div>
     <div class="dh-inner">
       <div class="date-eyebrow" data-en="Save the date">Reserva esta fecha</div>
-      <h2 class="date-h" data-en="My <em>big</em> day">Mi <em>gran</em> d&iacute;a</h2>
+      <h2 class="date-h">Mi <em>gran</em> fiesta</h2>
 
       <div class="date-numbers">
         <div class="date-block">
@@ -1786,7 +1781,7 @@ body{font-weight:500}
       </div>
 
       <div class="date-roman">XIX &middot; XII &middot; MMXXVI</div>
-      <p class="date-note">Un a&ntilde;o m&aacute;s de vida, de bendiciones<br>y de sue&ntilde;os por cumplir.</p>
+      <p class="date-note">Tres a&ntilde;itos llenos de risas, abrazos<br>y travesuras que celebrar.</p>
     </div>
   </section>
 
@@ -1876,14 +1871,6 @@ body{font-weight:500}
   </div>
 
 
-  <div class="ph rv">
-    <svg class="ph-corner ph-c-tl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-tr" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-bl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-br" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <div class="ph-inner"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/foto-vestido.jpg?v=2" alt="Iris Araceli" loading="lazy"></div>
-    <span class="ph-cap" data-en="The big day">El gran d&iacute;a</span>
-  </div>
 
   <!-- ITINERARIO — Cards con iconos ilustrados -->
   <section id="siti">
@@ -1986,13 +1973,6 @@ body{font-weight:500}
     <div class="eyebrow eyebrow-gold rv" data-en="With the Blessing of">Con la Bendici&oacute;n de</div>
     <h2 class="sec-title rv" data-en="My Family">Mi Familia</h2>
 
-  <div class="ph rv">
-    <svg class="ph-corner ph-c-tl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-tr" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-bl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-br" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <div class="ph-inner"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/foto-familia.jpg?v=2" alt="Iris Araceli" loading="lazy"></div>
-  </div>
     <div class="fam2">
 
       <div class="fam2-group rv">
@@ -2055,22 +2035,7 @@ body{font-weight:500}
   </div>
 
 
-  <!-- GALERIA — rueda 3D arrastrable -->
-  <section id="sgal">
-    <div class="eyebrow eyebrow-gold rv">Momentos</div>
-    <h2 class="sec-title rv">Galer&iacute;a</h2>
-    <div class="wheel-scene rv" id="wheel-scene">
-      <div class="wheel-ring" id="wheel-ring">
-          <div class="wheel-card"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/wheel-1.jpg?v=2" alt="Iris Araceli"></div>
-          <div class="wheel-card"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/wheel-2.jpg?v=2" alt="Iris Araceli"></div>
-          <div class="wheel-card"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/wheel-3.jpg?v=2" alt="Iris Araceli"></div>
-          <div class="wheel-card"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/wheel-4.jpg?v=2" alt="Iris Araceli"></div>
-          <div class="wheel-card"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/wheel-5.jpg?v=2" alt="Iris Araceli"></div>
-          <div class="wheel-card"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/wheel-6.jpg?v=2" alt="Iris Araceli"></div>
-      </div>
-    </div>
-    <p class="wgal-hint" data-en="Drag to spin">Arrastra para girar</p>
-  </section>
+
 
   <div class="orn rv">
     <svg viewBox="0 0 300 42" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2173,14 +2138,6 @@ body{font-weight:500}
   </div>
 
 
-  <div class="ph rv">
-    <svg class="ph-corner ph-c-tl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-tr" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-bl" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <svg class="ph-corner ph-c-br" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M1 25 L1 1 L25 1" stroke="var(--gold)" stroke-width="1.1" opacity=".72"/><path d="M5 25 L5 5 L25 5" stroke="var(--gold)" stroke-width=".6" opacity=".38"/><circle cx="1" cy="1" r="2" fill="var(--gold)" opacity=".6"/></svg>
-    <div class="ph-inner"><img src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/xv-leticia/foto-cierre.jpg?v=2" alt="Iris Araceli" loading="lazy"></div>
-    <span class="ph-cap" data-en="I&rsquo;ll be waiting for you">Te espero</span>
-  </div>
 
   <!-- RSVP -->
   <section class="rv bgsec" id="srsvp">
@@ -2667,7 +2624,7 @@ function initScrollReveal(){
   if(!gcal) return;
 
   var TXT={
-    es:{t:'Cumpleaños de Iris Araceli',
+    es:{t:'3 añitos de Iris Araceli',
         d:'Recepción: 2:00 PM — Barda "Real Jardín", Calz. de los Arcos 557, Rincón de los Arcos, 36633 Irapuato, Gto.\n\nCeremonia religiosa: por confirmar\n\nInvitación: https://cumple-iris-araceli-troncoso-villafana.vercel.app',
         ics:'/evento.ics'}
   };
@@ -3409,7 +3366,7 @@ gsap.fromTo('.rsvp-deadline-jen',{opacity:0,letterSpacing:'1em'},{opacity:1,lett
   var RM = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Menu de secciones */
-  var SECS=[['sinicio','Inicio'],['subic','Ubicaci\u00f3n'],['siti','Itinerario'],['sdress','Vestimenta'],['sfam','Familia'],['sgal','Galer\u00eda'],['sregalos','Regalos'],['srsvp','Confirmar']]
+  var SECS=[['sinicio','Inicio'],['subic','Ubicaci\u00f3n'],['siti','Itinerario'],['sdress','Vestimenta'],['sfam','Familia'],['sregalos','Regalos'],['srsvp','Confirmar']]
     .filter(function(x){ return document.getElementById(x[0]); });
   var pill=document.getElementById('navpill'), links=document.getElementById('npLinks'), ind=document.getElementById('npInd');
   var full=document.getElementById('navfull'), list=document.getElementById('nfList');
