@@ -6,10 +6,10 @@ METHOD:PUBLISH
 BEGIN:VEVENT
 UID:recepcion-cumple-iris-20261219@cumple-iris-araceli-troncoso-villafana.vercel.app
 DTSTAMP:20261023T120000Z
-DTSTART:20261219T200000Z
-DTEND:20261220T050000Z
+DTSTART:20261219T190000Z
+DTEND:20261220T040000Z
 SUMMARY:Cumpleaños de Iris Araceli
-DESCRIPTION:Recepción 2:00 PM. Ceremonia religiosa: por confirmar.\n\nInvitación: https://cumple-iris-araceli-troncoso-villafana.vercel.app
+DESCRIPTION:Ceremonia religiosa 1:00 PM. Recepción 2:00 PM.\n\nInvitación: https://cumple-iris-araceli-troncoso-villafana.vercel.app
 LOCATION:Barda Real Jardín\, Calz. de los Arcos 557\, Rincón de los Arcos\, 36633 Irapuato\, Gto.
 STATUS:CONFIRMED
 BEGIN:VALARM
