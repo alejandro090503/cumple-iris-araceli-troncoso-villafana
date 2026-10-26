@@ -1595,6 +1595,20 @@ body{font-weight:500}
 .itv4-icon{animation:itiBob 4s ease-in-out infinite}
 .itv4-card:nth-child(3n) .itv4-icon{animation-delay:-1.3s}.itv4-card:nth-child(3n+1) .itv4-icon{animation-delay:-2.6s}
 @media (prefers-reduced-motion:reduce){.itv4-icon{animation:none}}
+
+/* ===== Musica: nubecita en lugar del vinilo ===== */
+.cloud-btn{width:88px!important;height:62px!important;border-radius:0!important;box-shadow:none!important;background:none!important;overflow:visible}
+.cloud-btn::after{display:none!important}
+.cloud-img{width:100%;height:100%;display:block;filter:drop-shadow(0 8px 14px rgba(183,110,121,.35));animation:cloudFloat 4.5s ease-in-out infinite}
+@keyframes cloudFloat{0%,100%{translate:0 0}50%{translate:0 -5px}}
+.cloud-btn .vinyl-icons{position:absolute;left:50%;top:58%;width:24px;height:24px;transform:translate(-50%,-50%);display:block}
+.cloud-notes{position:absolute;inset:0;pointer-events:none}
+.cloud-notes i{position:absolute;left:50%;top:10%;font-style:normal;font-size:16px;color:#B76E79;opacity:0}
+.cloud-btn.is-playing .cloud-notes i{animation:noteUp 2.6s ease-out infinite}
+.cloud-btn.is-playing .cloud-notes i:nth-child(2){animation-delay:.9s;left:30%}
+.cloud-btn.is-playing .cloud-notes i:nth-child(3){animation-delay:1.7s;left:68%}
+@keyframes noteUp{0%{opacity:0;transform:translate(0,0) scale(.7)}20%{opacity:.9}100%{opacity:0;transform:translate(10px,-38px) scale(1.1)}}
+@media (prefers-reduced-motion:reduce){.cloud-img,.cloud-notes i{animation:none!important}}
 </style>
 </head>
 <body>
@@ -1793,8 +1807,6 @@ body{font-weight:500}
           <div class="date-lbl" data-en="Saturday">S&aacute;bado</div>
         </div>
       </div>
-
-      <div class="date-roman">XIX &middot; XII &middot; MMXXVI</div>
       <p class="date-note">Tres a&ntilde;itos llenos de risas, abrazos<br>y travesuras que celebrar.</p>
     </div>
   </section>
@@ -1991,8 +2003,8 @@ body{font-weight:500}
     <div class="dress-tipo rv">Semiformal</div>
     <p class="dress-txt rv">Te sugerimos un atuendo elegante y c&oacute;modo para disfrutar la celebraci&oacute;n.</p>
     <div class="dc-figures rv">
-      <figure class="dc-fig"><img src="caballero.png" alt="Caballero de traje" width="300" height="610"><figcaption class="dc-fig-label">Caballeros</figcaption></figure>
-      <figure class="dc-fig"><img src="dama.png" alt="Dama de vestido largo" width="248" height="604"><figcaption class="dc-fig-label">Damas</figcaption></figure>
+      <figure class="dc-fig"><img src="caballero.png" alt="Caballero semiformal" width="218" height="760"><figcaption class="dc-fig-label">Caballeros</figcaption></figure>
+      <figure class="dc-fig"><img src="dama.png" alt="Dama semiformal" width="192" height="760"><figcaption class="dc-fig-label">Damas</figcaption></figure>
     </div>
     <!-- Colores: llenar DC_SUGERIDOS / DC_EVITAR en el JS cuando el cliente los mande -->
     <div class="dc-colors" id="dcColors">
@@ -2311,23 +2323,13 @@ body{font-weight:500}
 </div>
 
 <!-- MUSICA — Disco de vinilo flotante -->
-<button class="vinyl-btn" id="music-btn" type="button" aria-label="Reproducir m&uacute;sica de la invitaci&oacute;n">
-  <div class="vinyl-tonearm">
-    <div class="vinyl-tonearm-pivot"></div>
-    <div class="vinyl-tonearm-line"></div>
-    <div class="vinyl-tonearm-head"></div>
-  </div>
-  <div class="vinyl-spin">
-    <div class="vinyl-disc">
-      <div class="vinyl-sheen"></div>
-      <div class="vinyl-label-text">I<small>2026</small></div>
-      <div class="vinyl-hole"></div>
-    </div>
-  </div>
-  <div class="vinyl-icons">
-    <svg class="vinyl-icon-play" viewBox="0 0 24 24" fill="#ffdee2" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
-    <svg class="vinyl-icon-pause" viewBox="0 0 24 24" fill="#ffdee2" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
-  </div>
+<button class="vinyl-btn cloud-btn" id="music-btn" type="button" aria-label="Reproducir m&uacute;sica de la invitaci&oacute;n">
+  <img class="cloud-img" src="nube.png" alt="" width="400" height="280">
+  <span class="cloud-notes" aria-hidden="true"><i>&#9834;</i><i>&#9835;</i><i>&#9834;</i></span>
+  <span class="vinyl-icons">
+    <svg class="vinyl-icon-play" viewBox="0 0 24 24" fill="#B76E79" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+    <svg class="vinyl-icon-pause" viewBox="0 0 24 24" fill="#B76E79" aria-hidden="true"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+  </span>
 </button>
 <audio id="bgAudio" loop preload="none">
   <source src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/audio/cumple-iris-araceli-troncoso-villafana/cancion.mp3" type="audio/mpeg">
@@ -3222,9 +3224,6 @@ function initWheelGallery(){
   gsap.fromTo('.date-block',{opacity:0,y:40},
     {opacity:1,y:0,duration:1.2,stagger:.15,ease:'power4.out',
      scrollTrigger:{trigger:'.date-numbers',start:'top 82%'}});
-  gsap.fromTo('.date-roman',{opacity:0,letterSpacing:'1em'},
-    {opacity:1,letterSpacing:'.34em',duration:1.2,ease:'power3.out',
-     scrollTrigger:{trigger:'.date-roman',start:'top 86%'}});
   gsap.fromTo('.date-note',{opacity:0,y:18},
     {opacity:1,y:0,duration:1,ease:'power2.out',
      scrollTrigger:{trigger:'.date-note',start:'top 88%'}});
