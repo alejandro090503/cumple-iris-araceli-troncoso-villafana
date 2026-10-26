@@ -1574,6 +1574,27 @@ body{font-weight:500}
 @keyframes ageBounce{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-8px) rotate(3deg)}}
 @media (prefers-reduced-motion:reduce){.age-3{animation:none}}
 .hero-bg{-webkit-mask-image:linear-gradient(#000 0,#000 calc(100% - 220px),transparent);mask-image:linear-gradient(#000 0,#000 calc(100% - 220px),transparent)}
+
+/* ===== ITINERARIO (3 añitos) ===== */
+#siti{padding:70px 18px 80px}
+.iti-prov{display:table;margin:-6px auto 26px;padding:6px 16px;border-radius:999px;background:rgba(244,164,192,.22);border:1px dashed rgba(183,110,121,.45);font-family:'Inter Tight',sans-serif;font-weight:600;font-size:14px;letter-spacing:.08em;color:var(--dark)}
+.itv4{position:relative;display:flex!important;flex-direction:column!important;gap:16px!important;max-width:420px;margin:0 auto!important;padding:0!important}
+.iti-line{left:31px!important;width:3px!important;margin-left:0!important;border-radius:3px;opacity:.75!important;background:repeating-linear-gradient(to bottom,var(--pink) 0 10px,transparent 10px 16px)!important}
+.itv4-card{display:flex!important;align-items:center!important;gap:16px!important;padding:0!important;background:none!important;border:none!important;box-shadow:none!important;width:auto!important;flex-direction:row!important;text-align:left!important}
+.itv4-icon{flex:0 0 64px!important;width:64px!important;height:64px!important;border-radius:50%!important;display:flex;align-items:center;justify-content:center;color:#fff!important;
+  background:radial-gradient(circle at 32% 28%,#fbd3df,#f4a4c0 45%,#c9808c)!important;border:3px solid #fff!important;box-shadow:0 8px 18px -6px rgba(183,110,121,.55),0 0 0 1px rgba(183,110,121,.25)!important;position:relative;z-index:1}
+.itv4-card:nth-child(even) .itv4-icon{background:radial-gradient(circle at 32% 28%,#fff6ec,#F7E7CE 45%,#d9b48f)!important;color:#8d4a57!important}
+.itv4-icon svg{width:30px!important;height:30px!important;stroke:currentColor!important}
+.itv4-icon svg *{stroke:currentColor}
+.itv4-info{flex:1;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.86);border:1px solid rgba(183,110,121,.22);box-shadow:0 10px 24px -16px rgba(109,58,76,.45);position:relative}
+.itv4-info::before{content:'';position:absolute;left:-7px;top:50%;width:12px;height:12px;background:inherit;border-left:1px solid rgba(183,110,121,.22);border-bottom:1px solid rgba(183,110,121,.22);transform:translateY(-50%) rotate(45deg)}
+.itv4-time{font-family:'Inter Tight',sans-serif!important;font-weight:700!important;font-size:15px!important;letter-spacing:.06em!important;color:#B76E79!important;margin:0 0 2px!important}
+.itv4-label{font-family:'Playfair Display',serif!important;font-style:italic;font-weight:600!important;font-size:21px!important;letter-spacing:0!important;text-transform:none!important;color:var(--dark)!important;line-height:1.25}
+.itv4-desc{font-family:'Cormorant Garamond',serif;font-weight:500;font-size:17px;line-height:1.4;color:var(--text);margin-top:2px}
+@keyframes itiBob{0%,100%{translate:0 0}50%{translate:0 -4px}}
+.itv4-icon{animation:itiBob 4s ease-in-out infinite}
+.itv4-card:nth-child(3n) .itv4-icon{animation-delay:-1.3s}.itv4-card:nth-child(3n+1) .itv4-icon{animation-delay:-2.6s}
+@media (prefers-reduced-motion:reduce){.itv4-icon{animation:none}}
 </style>
 </head>
 <body>
@@ -1870,45 +1891,64 @@ body{font-weight:500}
     <div class="ink-bg " aria-hidden="true"><i style="background-image:url('ink/ink-corner.webp')"></i></div>
     <div class="eyebrow eyebrow-gold rv" data-en="Schedule of the Day">Programa del D&iacute;a</div>
     <h2 class="sec-title rv" data-en="Itinerary">Itinerario</h2>
+    <p class="iti-prov rv">Horarios provisionales</p>
     <div class="itv4">
-
-      <!-- Misa -->
-      <div class="itv4-card rv">
-        <div class="itv4-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2L14 8H10L12 2Z" fill="var(--gold)" stroke="none" opacity=".6"/>
-            <path d="M6 22V12C6 10 8 8 12 8C16 8 18 10 18 12V22"/>
-            <line x1="6" y1="22" x2="18" y2="22"/>
-            <line x1="12" y1="2" x2="12" y2="8"/>
-            <line x1="9" y1="5" x2="15" y2="5"/>
-            <path d="M9 15H15" opacity=".5"/>
-            <path d="M8 18H16" opacity=".4"/>
-          </svg>
-        </div>
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v5M9.5 4.5h5"/><path d="M5 22V12l7-5 7 5v10"/><path d="M10 22v-4a2 2 0 0 1 4 0v4"/><path d="M3 22h18"/></svg></div>
         <div class="itv4-info">
           <div class="itv4-time">Por confirmar</div>
-          <div class="itv4-label">Ceremonia Religiosa</div>
+          <div class="itv4-label">Ceremonia religiosa</div>
+          <div class="itv4-desc">Damos gracias a Dios por mis 3 a&ntilde;itos</div>
         </div>
       </div>
-
-      <!-- Recepción -->
-      <div class="itv4-card rv">
-        <div class="itv4-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="var(--dark)" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 21H21" opacity=".5"/>
-            <path d="M5 21V14L12 10L19 14V21"/>
-            <rect x="9" y="16" width="6" height="5" rx="1" opacity=".4"/>
-            <path d="M12 10V7"/>
-            <circle cx="12" cy="6" r="1" fill="var(--gold)" stroke="none"/>
-            <path d="M8 14H16"/>
-          </svg>
-        </div>
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c3.3 0 6 2.6 6 6 0 3.8-3.2 7-6 7s-6-3.2-6-7c0-3.4 2.7-6 6-6z"/><path d="M11 16l1 1.5 1-1.5"/><path d="M12 17.5c0 1.5-1.5 2-1 3.5"/><path d="M9.5 7.5c.5-1 1.3-1.6 2.3-1.8" opacity=".6"/></svg></div>
         <div class="itv4-info">
           <div class="itv4-time">2:00 PM</div>
-          <div class="itv4-label" data-en="Reception">Recepci&oacute;n</div>
+          <div class="itv4-label">Bienvenida</div>
+          <div class="itv4-desc">Recepci&oacute;n en Barda &ldquo;Real Jard&iacute;n&rdquo;</div>
         </div>
       </div>
-
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="12" width="8" height="8" rx="1.5"/><rect x="13" y="12" width="8" height="8" rx="1.5"/><rect x="8" y="3" width="8" height="8" rx="1.5"/><path d="M6.5 15.5h1M16.5 15.5h1M11.5 6.5h1"/></svg></div>
+        <div class="itv4-info">
+          <div class="itv4-time">2:30 PM</div>
+          <div class="itv4-label">Juegos y diversi&oacute;n</div>
+          <div class="itv4-desc">Actividades para grandes y peque&ntilde;os</div>
+        </div>
+      </div>
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="6"/><circle cx="12" cy="13" r="3" opacity=".5"/><path d="M3 4v5a2 2 0 0 0 2 2v9M5 4v5M21 4c-1.5 0-2.5 2-2.5 5h2.5v11"/></svg></div>
+        <div class="itv4-info">
+          <div class="itv4-time">3:30 PM</div>
+          <div class="itv4-label">Comida</div>
+          <div class="itv4-desc">Compartimos la mesa en familia</div>
+        </div>
+      </div>
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16v-8H4z"/><path d="M4 16c1.3 1 2.7 1 4 0s2.7-1 4 0 2.7 1 4 0 2.7-1 4 0"/><path d="M8 13V9M12 13V9M16 13V9"/><path d="M8 6.5c0-.8.5-1.5.0-2.5M12 6.5c0-.8.5-1.5 0-2.5M16 6.5c0-.8.5-1.5 0-2.5"/></svg></div>
+        <div class="itv4-info">
+          <div class="itv4-time">4:30 PM</div>
+          <div class="itv4-label">Pastel y Las Ma&ntilde;anitas</div>
+          <div class="itv4-desc">&iexcl;A soplar las velitas!</div>
+        </div>
+      </div>
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4"/><path d="M12 6l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5-3.6-3.5 5-.7z"/></svg></div>
+        <div class="itv4-info">
+          <div class="itv4-time">5:00 PM</div>
+          <div class="itv4-label">Pi&ntilde;ata</div>
+          <div class="itv4-desc">Dulces para todos los ni&ntilde;os</div>
+        </div>
+      </div>
+      <div class="itv4-card">
+        <div class="itv4-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="9" width="18" height="12" rx="1.5"/><path d="M3 13h18M12 9v12"/><path d="M12 9c-1.5-3-5-3.5-5-1.5S10 9 12 9zM12 9c1.5-3 5-3.5 5-1.5S14 9 12 9z"/></svg></div>
+        <div class="itv4-info">
+          <div class="itv4-time">6:00 PM</div>
+          <div class="itv4-label">Despedida</div>
+          <div class="itv4-desc">Bolsitas de dulces y recuerditos</div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -2618,7 +2658,7 @@ function initScrollReveal(){
 
   var TXT={
     es:{t:'3 añitos de Iris Araceli',
-        d:'Recepción: 2:00 PM — Barda "Real Jardín", Calz. de los Arcos 557, Rincón de los Arcos, 36633 Irapuato, Gto.\n\nCeremonia religiosa: por confirmar\n\nInvitación: https://cumple-iris-araceli-troncoso-villafana.vercel.app',
+        d:'Recepción: 2:00 PM (horarios provisionales) — Barda "Real Jardín", Calz. de los Arcos 557, Rincón de los Arcos, 36633 Irapuato, Gto.\n\nCeremonia religiosa: por confirmar\n\nInvitación: https://cumple-iris-araceli-troncoso-villafana.vercel.app',
         ics:'/evento.ics'}
   };
   var LOC = encodeURIComponent('Barda Real Jardín, Calz. de los Arcos 557, Rincón de los Arcos, 36633 Irapuato, Gto.');
