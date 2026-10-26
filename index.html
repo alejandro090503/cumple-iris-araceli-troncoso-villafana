@@ -8,7 +8,7 @@
 <meta property="og:title" content="Los 3 a&ntilde;itos de Iris Araceli &middot; 19 Diciembre 2026">
 <meta property="og:description" content="Te espero para celebrar &middot; Irapuato, Gto. &middot; 19 de diciembre de 2026">
 <meta property="og:url" content="https://cumple-iris-araceli-troncoso-villafana.vercel.app">
-<meta property="og:image" content="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/og-image.jpg?v=2">
+<meta property="og:image" content="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/og-image.jpg?v=3">
 <meta property="og:image:type" content="image/jpeg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -1612,6 +1612,22 @@ body{font-weight:500}
 .cloud-btn.is-playing .cloud-notes i:nth-child(3){animation-delay:1.7s;left:68%}
 @keyframes noteUp{0%{opacity:0;transform:translate(0,0) scale(.7)}20%{opacity:.9}100%{opacity:0;transform:translate(10px,-38px) scale(1.1)}}
 @media (prefers-reduced-motion:reduce){.cloud-img,.cloud-notes i{animation:none!important}}
+
+/* nubes de la portada: deriva horizontal */
+.hero-drift{inset:0 -14%!important;animation:heroPan 32s ease-in-out infinite alternate!important}
+@keyframes heroPan{0%{transform:translate3d(-7%,0,0) scale(1.04)}100%{transform:translate3d(7%,-1%,0) scale(1.08)}}
+/* halo del salmo sobre el asset */
+.intro-salmo,.intro-salmo span,.intro-salmo-ref{text-shadow:0 0 6px #fff,0 0 14px rgba(255,250,248,.98),0 0 26px rgba(255,248,246,.95),0 0 40px rgba(255,248,246,.85)!important}
+.intro-salmo{position:relative;color:var(--dark)!important}
+.intro-salmo::before{content:'';position:absolute;inset:-14px -10px;z-index:-1;border-radius:40%;background:radial-gradient(ellipse at center,rgba(255,250,248,.82) 0%,rgba(255,250,248,.55) 55%,transparent 75%)}
+/* menu sin boton de compartir */
+.np-share,.np-sep{display:none!important}
+/* ubicacion: tinta mas presente; ovalo en reserva la fecha */
+.ink-bg.ink-strong{opacity:1}
+.ink-bg.ink-strong i{opacity:.95}
+.date-hero::before{display:none!important}
+#dateHero{position:relative;isolation:isolate}
+#dateHero .ink-bg{-webkit-mask-image:none;mask-image:none}
 </style>
 </head>
 <body>
@@ -1649,8 +1665,8 @@ body{font-weight:500}
 
 <!-- ENVELOPE -->
 <div id="envelope-screen" role="button" aria-label="Toca para abrir tu invitacion">
-  <img id="env-image" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/sobre.jpg?v=1" alt="Invitaci&oacute;n de Iris Araceli">
-  <video id="env-video" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/apertura.mp4?v=1" playsinline webkit-playsinline muted preload="auto"></video>
+  <img id="env-image" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/sobre.jpg?v=2" alt="Invitaci&oacute;n de Iris Araceli">
+  <video id="env-video" src="https://bsjoelxktbvlavfoozhk.supabase.co/storage/v1/object/public/fotos-clientes/cumple-iris-araceli-troncoso-villafana/apertura.mp4?v=2" playsinline webkit-playsinline muted preload="auto"></video>
   <p class="envelope-hint" id="env-hint" data-en="Tap to open">Toca para abrir</p>
 </div>
 <div id="env-flash"></div>
@@ -1795,6 +1811,7 @@ body{font-weight:500}
 
   <!-- RESERVA ESTA FECHA -->
   <section class="date-hero" id="dateHero">
+    <div class="ink-bg" aria-hidden="true"><i style="background-image:url('ink/ink-oval.webp');background-size:contain;background-repeat:no-repeat"></i></div>
     <div class="dh-glow" aria-hidden="true"></div>
     <div class="dh-inner">
       <div class="date-eyebrow" data-en="Save the date">Reserva esta fecha</div>
@@ -1816,7 +1833,7 @@ body{font-weight:500}
 
   <!-- UBICACION — Dos venues distintos -->
   <section id="subic" class="bgsec">
-    <div class="ink-bg " aria-hidden="true"><i style="background-image:url('ink/ink-oval.webp')"></i></div>
+    <div class="ink-bg ink-strong" aria-hidden="true"><i style="background-image:url('ink/ink-footer.webp')"></i></div>
     <div class="eyebrow eyebrow-gold rv" data-en="Where we celebrate">D&oacute;nde celebraremos</div>
     <h2 class="sec-title rv" data-en="Location">Ubicaci&oacute;n</h2>
     <div class="loc-grid">
